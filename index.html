@@ -97,10 +97,19 @@
   <div class="board" id="board"></div>
   <div class="keyboard" id="keyboard"></div>
 
-  <script>
-    const WORD_LENGTH = 6;
-    const MAX_GUESSES = 6;
-    const ANSWER = "planet"; // The answer word in lowercase
+ <script>
+  const WORD_LENGTH = 6;
+  const MAX_GUESSES = 6;
+  const WORDS = [
+  "planet", "puzzle", "rocket", "market", "singer", "butter", "animal", "supply",
+  "forest", "legend", "castle", "guitar", "orange", "stripe", "school", "valley",
+  "module", "rescue", "danger", "travel", "object", "bridge", "hunter", "fabric",
+  "doctor", "circle", "energy", "marble", "flight", "ticket", "stream", "editor",
+  "player", "bottle", "nature", "people", "action", "bright", "silver", "client",
+  "spirit", "income", "danger", "reveal", "cheese", "museum", "camera", "season",
+  "window", "bishop"
+];
+  const ANSWER = WORDS[Math.floor(Math.random() * WORDS.length)];
 
     let currentGuess = "";
     let currentRow = 0;
